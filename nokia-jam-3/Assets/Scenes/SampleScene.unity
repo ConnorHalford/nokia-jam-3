@@ -137,7 +137,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &100089111
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -214,7 +214,7 @@ GameObject:
   - component: {fileID: 222200813}
   - component: {fileID: 222200812}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: BookText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -232,7 +232,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1612056512}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -258,7 +258,253 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "!\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~\_\xA1\xA3\xA4\xA5\xA6\xA7\xBA\xBF\xC0\xC1\xC2\xC3\xC4\xC5\xC6\xC7\xC8\xC9\xCA\xCB\xCC\xCD\xCE\xCF\xD1\xD2\xD3\xD4\xD5\xD6\xD8\xD9\xDA\xDB\xDC\xDD\xDF\xE0\xE1\xE2\xE3\xE4\xE5\xE6\xE7\xE8\xE9\xEA\xEB\xEC\xED\xEE\xEF\xF1\xF2\xF3\xF4\xF5\xF6\xF8\xF9\xFA\xFB\xFC\xFD\xFF\u2019\u20AC"
+  m_text: 'Chapter XXXVII
+
+    
+
+    IN WHICH IT IS SHOWN THAT PHILEAS FOGG GAINED
+    NOTHING BY HIS TOUR AROUND THE WORLD, UNLESS IT WERE HAPPINESS
+
+    
+
+    Yes;
+    Phileas Fogg in person.
+
+    
+
+    The reader will remember that at five minutes
+    past eight in the evening--about five and twenty hours after the arrival of the
+    travellers in London--Passepartout had been sent by his master to engage the
+    services of the Reverend Samuel Wilson in a certain marriage ceremony, which
+    was to take place the next day.
+
+    
+
+    Passepartout went on his errand
+    enchanted. He soon reached the clergyman''s house, but found him not at home.
+    Passepartout waited a good twenty minutes, and when he left the reverend gentleman,
+    it was thirty-five minutes past eight. But in what a state he was! With his hair
+    in disorder, and without his hat, he ran along the street as never man was seen
+    to run before, overturning passers-by, rushing over the sidewalk like a waterspout.
+
+    
+
+    In
+    three minutes he was in Saville Row again, and staggered back into Mr. Fogg''s
+    room.
+
+    
+
+    He could not speak.
+
+    
+
+    "What is the matter?" asked
+    Mr. Fogg.
+
+    
+
+    "My master!" gasped Passepartout--"marriage--impossible--"
+
+    
+
+    "Impossible?"
+
+    
+
+    "Impossible--for
+    to-morrow."
+
+    
+
+    "Why so?"
+
+    
+
+    "Because to-morrow--is Sunday!"
+
+    
+
+    "Monday,"
+    replied Mr. Fogg.
+
+    
+
+    "No--to-day is Saturday."
+
+    
+
+    "Saturday?
+    Impossible!"
+
+    
+
+    "Yes, yes, yes, yes!" cried Passepartout. "You have
+    made a mistake of one day! We arrived twenty-four hours ahead of time; but there
+    are only ten minutes left!"
+
+    
+
+    Passepartout had seized his master by
+    the collar, and was dragging him along with irresistible force.
+
+    
+
+    Phileas
+    Fogg, thus kidnapped, without having time to think, left his house, jumped into
+    a cab, promised a hundred pounds to the cabman, and, having run over two dogs
+    and overturned five carriages, reached the Reform Club.
+
+    
+
+    The clock
+    indicated a quarter before nine when he appeared in the great saloon.
+
+    
+
+    Phileas
+    Fogg had accomplished the journey round the world in eighty days!
+
+    
+
+    Phileas
+    Fogg had won his wager of twenty thousand pounds!
+
+    
+
+    How was it that
+    a man so exact and fastidious could have made this error of a day? How came he
+    to think that he had arrived in London on Saturday, the twenty-first day of December,
+    when it was really Friday, the twentieth, the seventy-ninth day only from his
+    departure?
+
+    
+
+    The cause of the error is very simple.
+
+    
+
+    Phileas
+    Fogg had, without suspecting it, gained one day on his journey, and this merely
+    because he had travelled constantly eastward; he would, on the contrary, have
+    lost a day had he gone in the opposite direction, that is, westward.
+
+    
+
+    In
+    journeying eastward he had gone towards the sun, and the days therefore diminished
+    for him as many times four minutes as he crossed degrees in this direction. There
+    are three hundred and sixty degrees on the circumference of the earth; and these
+    three hundred and sixty degrees, multiplied by four minutes, gives precisely
+    twenty-four hours--that is, the day unconsciously gained. In other words, while
+    Phileas Fogg, going eastward, saw the sun pass the meridian eighty times, his
+    friends in London only saw it pass the meridian seventy-nine times. This is why
+    they awaited him at the Reform Club on Saturday, and not Sunday, as Mr. Fogg
+    thought.
+
+    
+
+    And Passepartout''s famous family watch, which had always
+    kept London time, would have betrayed this fact, if it had marked the days as
+    well as the hours and the minutes!
+
+    
+
+    Phileas Fogg, then, had won the
+    twenty thousand pounds; but, as he had spent nearly nineteen thousand on the
+    way, the pecuniary gain was small. His object was, however, to be victorious,
+    and not to win money. He divided the one thousand pounds that remained between
+    Passepartout and the unfortunate Fix, against whom he cherished no grudge. He
+    deducted, however, from Passepartout''s share the cost of the gas which had burned
+    in his room for nineteen hundred and twenty hours, for the sake of regularity.
+
+    
+
+    That
+    evening, Mr. Fogg, as tranquil and phlegmatic as ever, said to Aouda: "Is our
+    marriage still agreeable to you?"
+
+    
+
+    "Mr. Fogg," replied she, "it is
+    for me to ask that question. You were ruined, but now you are rich again."
+
+    
+
+    "Pardon
+    me, madam; my fortune belongs to you. If you had not suggested our marriage,
+    my servant would not have gone to the Reverend Samuel Wilson''s, I should not
+    have been apprised of my error, and--"
+
+    
+
+    "Dear Mr. Fogg!" said the
+    young woman.
+
+    
+
+    "Dear Aouda!" replied Phileas Fogg.
+
+    
+
+    It
+    need not be said that the marriage took place forty-eight hours after, and that
+    Passepartout, glowing and dazzling, gave the bride away. Had he not saved her,
+    and was he not entitled to this honour?
+
+    
+
+    The next day, as soon as
+    it was light, Passepartout rapped vigorously at his master''s door. Mr. Fogg
+    opened it, and asked, "What''s the matter, Passepartout?"
+
+    
+
+    "What
+    is it, sir? Why, I''ve just this instant found out--"
+
+    
+
+    "What?"
+
+    
+
+    "That
+    we might have made the tour of the world in only seventy-eight days."
+
+    
+
+    "No
+    doubt," returned Mr. Fogg, "by not crossing India. But if I had not crossed India,
+    I should not have saved Aouda; she would not have been my wife, and--"
+
+    
+
+    Mr.
+    Fogg quietly shut the door.
+
+    
+
+    Phileas Fogg had won his wager, and
+    had made his journey around the world in eighty days. To do this he had employed
+    every means of conveyance--steamers, railways, carriages, yachts, trading-vessels,
+    sledges, elephants. The eccentric gentleman had throughout displayed all his
+    marvellous qualities of coolness and exactitude. But what then? What had he really
+    gained by all this trouble? What had he brought back from this long and weary
+    journey?
+
+    
+
+    Nothing, say you? Perhaps so; nothing but a charming woman,
+    who, strange as it may appear, made him the happiest of men!
+
+    
+
+    Truly,
+    would you not for less than that make the tour around the world?
+
+    <page>THE
+    END'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e1176c274fb0ae34fac4e53a5d29ecd7, type: 2}
   m_sharedMaterial: {fileID: 2323452360067102577, guid: e1176c274fb0ae34fac4e53a5d29ecd7,
@@ -268,8 +514,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4292407495
+  m_fontColor: {r: 0.78039217, g: 0.9411765, b: 0.84705883, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -298,13 +544,13 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -16
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 5
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
@@ -322,7 +568,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 1, y: 9, z: 0, w: -1}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -336,72 +582,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 222200810}
   m_CullTransparentMesh: 0
---- !u!1 &256055281
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 256055282}
-  - component: {fileID: 256055284}
-  - component: {fileID: 256055283}
-  m_Layer: 0
-  m_Name: EventSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &256055282
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 256055281}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -544, y: -282.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1612056512}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &256055283
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 256055281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
---- !u!114 &256055284
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 256055281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 10
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -459,7 +639,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.2627451, g: 0.32156864, b: 0.23921569, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -506,6 +686,140 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1290638592
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1290638593}
+  - component: {fileID: 1290638595}
+  - component: {fileID: 1290638594}
+  m_Layer: 5
+  m_Name: ChapterText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1290638593
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290638592}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1612056512}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1290638594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290638592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 01/99
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: e1176c274fb0ae34fac4e53a5d29ecd7, type: 2}
+  m_sharedMaterial: {fileID: 2323452360067102577, guid: e1176c274fb0ae34fac4e53a5d29ecd7,
+    type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4292407495
+  m_fontColor: {r: 0.78039217, g: 0.9411765, b: 0.84705883, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 8
+  m_fontSizeBase: 8
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: -16
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 1
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 5
+  m_margin: {x: 1, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1290638595
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290638592}
+  m_CullTransparentMesh: 0
 --- !u!1 &1612056508
 GameObject:
   m_ObjectHideFlags: 0
@@ -597,8 +911,9 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 256055282}
   - {fileID: 222200811}
+  - {fileID: 1290638593}
+  - {fileID: 1983850663}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -619,3 +934,137 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c07da131250b3c4cb99467fc676c822, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1983850662
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1983850663}
+  - component: {fileID: 1983850665}
+  - component: {fileID: 1983850664}
+  m_Layer: 5
+  m_Name: PageText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1983850663
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983850662}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1612056512}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1983850664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983850662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 01/99
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: e1176c274fb0ae34fac4e53a5d29ecd7, type: 2}
+  m_sharedMaterial: {fileID: 2323452360067102577, guid: e1176c274fb0ae34fac4e53a5d29ecd7,
+    type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4292407495
+  m_fontColor: {r: 0.78039217, g: 0.9411765, b: 0.84705883, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 8
+  m_fontSizeBase: 8
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 4
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: -16
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 1
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 5
+  m_margin: {x: 1, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1983850665
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983850662}
+  m_CullTransparentMesh: 0

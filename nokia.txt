@@ -1,0 +1,18 @@
+
+LIGHT	#C7F0D8		(199, 240, 216)
+DARK	#43523D		( 67,  82,  61)
+
+- Up/down line by line scrolling (or page by page if that proves tricky)
+- Home/End jump to top/bottom
+- Left/right chapter by chapter scrolling
+- Small number indicator of chapter in top right
+- Scrollbar
+- Books title screen like Messages/Games/etc on original phone
+- Light/dark mode
+- Book selection
+	- Title and author scrolls horizontally on the line
+	- Background shows selection
+	- Scrollbar
+	- Around the World in 80 Days by Jules Verne
+	- Frankenstein by Mary Shelley
+	- Curious case of Dr Jekyll and Mr Hyde
