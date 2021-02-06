@@ -12,14 +12,26 @@ public class Menu : MonoBehaviour
 		public int NumChapters = 0;
 	}
 
+	private enum State
+	{
+		BooksAnim,
+		BookSelection,
+		Reading
+	}
+
 	[SerializeField] private BookData[] _books = null;
 
 	[Header("UI")]
+	[SerializeField] private GameObject _rootBooksAnim = null;
+	[SerializeField] private GameObject _rootBookSelection = null;
+	[SerializeField] private GameObject _rootReading = null;
 	[SerializeField] private TextMeshProUGUI _textChapter = null;
 	[SerializeField] private TextMeshProUGUI _textPage = null;
 	[SerializeField] private TextMeshProUGUI _textBook = null;
 
 	[Header("Input")]
+	[SerializeField] private InputAction _inputConfirm = null;
+	[SerializeField] private InputAction _inputBack = null;
 	[SerializeField] private InputAction _inputNextPage = null;
 	[SerializeField] private InputAction _inputPrevPage = null;
 	[SerializeField] private InputAction _inputFirstPage = null;
@@ -32,16 +44,27 @@ public class Menu : MonoBehaviour
 	private int _pageIndex = -1;
 	private TextAsset _currentChapter = null;
 
+	private State _state = State.BooksAnim;
+
 	private void Awake()
 	{
-		LoadBook(1);
-
+		EnableAndSubscribe(_inputConfirm, OnConfirm);
+		EnableAndSubscribe(_inputBack, OnBack);
 		EnableAndSubscribe(_inputNextPage, OnNextPage);
 		EnableAndSubscribe(_inputPrevPage, OnPrevPage);
 		EnableAndSubscribe(_inputFirstPage, OnFirstPage);
 		EnableAndSubscribe(_inputLastPage, OnLastPage);
 		EnableAndSubscribe(_inputNextChapter, OnNextChapter);
 		EnableAndSubscribe(_inputPrevChapter, OnPrevChapter);
+		SetState(State.BooksAnim);
+	}
+
+	private void SetState(State newState)
+	{
+		_state = newState;
+		_rootBooksAnim.SetActive(_state == State.BooksAnim);
+		_rootBookSelection.SetActive(_state == State.BookSelection);
+		_rootReading.SetActive(_state == State.Reading);
 	}
 
 	private void LoadBook(int index)
@@ -80,6 +103,30 @@ public class Menu : MonoBehaviour
 		action.Enable();
 		action.performed -= callback;
 		action.performed += callback;
+	}
+
+	private void OnConfirm(InputAction.CallbackContext context)
+	{
+		if (_state == State.BooksAnim)
+		{
+			SetState(State.BookSelection);
+		}
+		else if (_state == State.BookSelection)
+		{
+			SetState(State.Reading);
+		}
+	}
+
+	private void OnBack(InputAction.CallbackContext context)
+	{
+		if (_state == State.Reading)
+		{
+			SetState(State.BookSelection);
+		}
+		else if (_state == State.BookSelection)
+		{
+			SetState(State.BooksAnim);
+		}
 	}
 
 	private void OnNextPage(InputAction.CallbackContext context)

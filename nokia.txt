@@ -5,14 +5,15 @@ DARK	#43523D		( 67,  82,  61)
 + Up/down page by page scrolling
 + Home/End jump to top/bottom
 + Left/right chapter by chapter scrolling
-- Small number indicator of chapter in top right
-- Scrollbar
++ Small number indicator of chapter in top right
+	- Use the smaller number font used in text editing
 - Books title screen like Messages/Games/etc on original phone
 - Light/dark mode
 - Book selection
 	- Title and author scrolls horizontally on the line
-	- Background shows selection
+	- Selection indicated by inverted colors
 	- Scrollbar
 	+ Around the World in 80 Days by Jules Verne
-	- Frankenstein by Mary Shelley
+	+ Frankenstein by Mary Shelley
 	- Curious case of Dr Jekyll and Mr Hyde
+	- Others?
