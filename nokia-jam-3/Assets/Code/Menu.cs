@@ -34,7 +34,7 @@ public class Menu : MonoBehaviour
 
 	private void Awake()
 	{
-		LoadBook(0);
+		LoadBook(1);
 
 		EnableAndSubscribe(_inputNextPage, OnNextPage);
 		EnableAndSubscribe(_inputPrevPage, OnPrevPage);

@@ -951,6 +951,9 @@ MonoBehaviour:
   - TitleAndAuthor: Around the World in 80 Days by Jules Verne
     ResourcesFolder: AroundTheWorldIn80Days
     NumChapters: 37
+  - TitleAndAuthor: 'Frankenstein: Or, The Modern Prometheus by Mary W. Shelley'
+    ResourcesFolder: Frankenstein
+    NumChapters: 28
   _textChapter: {fileID: 1290638594}
   _textPage: {fileID: 1983850664}
   _textBook: {fileID: 222200812}
