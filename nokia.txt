@@ -2,18 +2,44 @@
 LIGHT	#C7F0D8		(199, 240, 216)
 DARK	#43523D		( 67,  82,  61)
 
+
+
+TODO:
 + Up/down page by page scrolling
 + Home/End jump to top/bottom
 + Left/right chapter by chapter scrolling
-+ Small number indicator of chapter in top right
++ Chapter and page counters
 	- Use the smaller number font used in text editing
-- Books title screen like Messages/Games/etc on original phone
-- Light/dark mode
-- Book selection
-	- Title and author scrolls horizontally on the line
-	- Selection indicated by inverted colors
++ Books title screen like Messages/Games/etc on original phone
++ Book selection
+	- Title and author scrolls horizontally on the line if it doesn't fit
+	- Counter
+	+ Selection indicated by inverted colors
 	- Scrollbar
 	+ Around the World in 80 Days by Jules Verne
 	+ Frankenstein by Mary Shelley
-	- Curious case of Dr Jekyll and Mr Hyde
+	+ Curious case of Dr Jekyll and Mr Hyde
 	- Others?
+- Script to find all unique characters in a text which aren't handled by the Nokia font, so they can be manually replaced
+- Light/dark mode (post-processing shader to replace dark pixels with light and vice versa)
+
+
+
+Book conversion steps:
+- Download raw text from guthenberg.org
+- Remove guthenberg header and footer
+- Set first line to "TITLE by AUTHOR"
+- Set last line to "<page>THE END"
+- Replace all "\r\n\r\n" with "###"
+- Replace all "\r\n" with " "
+- Replace all "### " with "\r\n\r\n"
+- Replace all "###" with "\r\n\r\n"
+- Replace non renderable characters including:
+	— to --
+	’ to '
+	“ to "
+	” to "
+	_ delete
+- Remove any foot notes, author's notes, transcription notes etc. Search for []{}<>
+- Remove any non-narrative sections at start or end, such as biography or author or glossary
+- Split into separate text documents, with 0 being the title and author and 1+ being separate chapters or section breaks, splitting the book into reasonable text lengths for UI rendering

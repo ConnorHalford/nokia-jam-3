@@ -285,7 +285,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 882887335}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -567,7 +567,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4292407495
+    rgba: 4282208835
   m_fontColor: {r: 0.2627451, g: 0.32156864, b: 0.23921569, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -909,10 +909,10 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.01875
-    y: 0.01111111
-    width: 0.96250004
-    height: 0.9777778
+    x: 0
+    y: 0
+    width: 1
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -982,7 +982,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 81, y: -7}
-  m_SizeDelta: {x: 1, y: 31}
+  m_SizeDelta: {x: 1, y: 32}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &521325241
 MonoBehaviour:
@@ -1298,6 +1298,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 882887335}
+  - component: {fileID: 882887336}
   m_Layer: 5
   m_Name: Reading
   m_TagString: Untagged
@@ -1317,8 +1318,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1290638593}
-  - {fileID: 222200811}
   - {fileID: 1983850663}
+  - {fileID: 222200811}
   m_Father: {fileID: 1612056512}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1327,6 +1328,36 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &882887336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882887334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bcb80851043ac045b67280d981dc322, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _menuSelection: {fileID: 1090188424}
+  _textChapter: {fileID: 1290638594}
+  _textPage: {fileID: 1983850664}
+  _textBook: {fileID: 222200812}
+  _inputBack: {fileID: 5828660188516100503, guid: 571206ce61cbd89468d6471c54a3f8f2,
+    type: 3}
+  _inputNextPage: {fileID: 4288994307084833607, guid: 571206ce61cbd89468d6471c54a3f8f2,
+    type: 3}
+  _inputPrevPage: {fileID: 214515391036326907, guid: 571206ce61cbd89468d6471c54a3f8f2,
+    type: 3}
+  _inputFirstPage: {fileID: 4488597937207779524, guid: 571206ce61cbd89468d6471c54a3f8f2,
+    type: 3}
+  _inputLastPage: {fileID: 2950388411950787422, guid: 571206ce61cbd89468d6471c54a3f8f2,
+    type: 3}
+  _inputNextChapter: {fileID: 2194672773417077937, guid: 571206ce61cbd89468d6471c54a3f8f2,
+    type: 3}
+  _inputPrevChapter: {fileID: 3930615748666562266, guid: 571206ce61cbd89468d6471c54a3f8f2,
+    type: 3}
 --- !u!1 &1090188422
 GameObject:
   m_ObjectHideFlags: 0
@@ -1336,13 +1367,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1090188423}
+  - component: {fileID: 1090188424}
   m_Layer: 5
   m_Name: BookSelection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1090188423
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1373,6 +1405,49 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1090188424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1090188422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fc0c37f9945a0343b3162db413d286b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _menuBookAnim: {fileID: 1701891432}
+  _menuReading: {fileID: 882887336}
+  _highlight: {fileID: 1153987344}
+  _bookText:
+  - {fileID: 1134556522}
+  - {fileID: 855588032}
+  - {fileID: 17582344}
+  _colorLight: {r: 0.78039217, g: 0.9411765, b: 0.84705883, a: 1}
+  _colorDark: {r: 0.2627451, g: 0.32156864, b: 0.23921569, a: 1}
+  _inputConfirm: {fileID: -991107379598098246, guid: 571206ce61cbd89468d6471c54a3f8f2,
+    type: 3}
+  _inputBack: {fileID: 5828660188516100503, guid: 571206ce61cbd89468d6471c54a3f8f2,
+    type: 3}
+  _inputNextPage: {fileID: 4288994307084833607, guid: 571206ce61cbd89468d6471c54a3f8f2,
+    type: 3}
+  _inputPrevPage: {fileID: 214515391036326907, guid: 571206ce61cbd89468d6471c54a3f8f2,
+    type: 3}
+  _inputFirstPage: {fileID: 4488597937207779524, guid: 571206ce61cbd89468d6471c54a3f8f2,
+    type: 3}
+  _inputLastPage: {fileID: 2950388411950787422, guid: 571206ce61cbd89468d6471c54a3f8f2,
+    type: 3}
+  _bookData:
+  - TitleAndAuthor: Around the World in 80 Days by Jules Verne
+    ResourcesFolder: AroundTheWorldIn80Days
+    NumChapters: 37
+  - TitleAndAuthor: 'Frankenstein: Or, The Modern Prometheus by Mary W. Shelley'
+    ResourcesFolder: Frankenstein
+    NumChapters: 28
+  - TitleAndAuthor: The Strange Case of Dr. Jekyll and Mr. Hyde by Robert Louis Stevenson
+    ResourcesFolder: Jekyll
+    NumChapters: 10
 --- !u!1 &1134556520
 GameObject:
   m_ObjectHideFlags: 0
@@ -1519,7 +1594,7 @@ GameObject:
   - component: {fileID: 1153987345}
   - component: {fileID: 1153987344}
   m_Layer: 5
-  m_Name: SelectionBackground
+  m_Name: Highlight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1615,7 +1690,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: -38}
+  m_AnchoredPosition: {x: 0, y: -39}
   m_SizeDelta: {x: 84, y: 10}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1226726521
@@ -1721,7 +1796,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4292407495
+    rgba: 4282208835
   m_fontColor: {r: 0.2627451, g: 0.32156864, b: 0.23921569, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -1879,7 +1954,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1612056512}
-  - component: {fileID: 1612056514}
   - component: {fileID: 1612056509}
   - component: {fileID: 1612056511}
   - component: {fileID: 1612056510}
@@ -1985,263 +2059,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c07da131250b3c4cb99467fc676c822, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1612056514
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1612056508}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bcb80851043ac045b67280d981dc322, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _books:
-  - TitleAndAuthor: Around the World in 80 Days by Jules Verne
-    ResourcesFolder: AroundTheWorldIn80Days
-    NumChapters: 37
-  - TitleAndAuthor: 'Frankenstein: Or, The Modern Prometheus by Mary W. Shelley'
-    ResourcesFolder: Frankenstein
-    NumChapters: 28
-  _rootBooksAnim: {fileID: 1701891427}
-  _rootBookSelection: {fileID: 1090188422}
-  _rootReading: {fileID: 882887334}
-  _textChapter: {fileID: 1290638594}
-  _textPage: {fileID: 1983850664}
-  _textBook: {fileID: 222200812}
-  _inputConfirm:
-    m_Name: Input Confirm
-    m_Type: 1
-    m_ExpectedControlType: Button
-    m_Id: b92267ee-a8eb-4bbe-83b7-a531e628321b
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 82b71dcd-5514-4230-b7a7-52701db97a2d
-      m_Path: <Keyboard>/space
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Input Confirm
-      m_Flags: 0
-    - m_Name: 
-      m_Id: cc79afb7-4c3f-4a68-9882-037319798b23
-      m_Path: <Keyboard>/enter
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Input Confirm
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 69ffda25-3de9-4ae9-bd2b-4aa93bb425f8
-      m_Path: <Keyboard>/numpadEnter
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Input Confirm
-      m_Flags: 0
-    - m_Name: 
-      m_Id: fc09af70-7140-45a1-bae5-71b53773099f
-      m_Path: <Keyboard>/numpad5
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Input Confirm
-      m_Flags: 0
-  _inputBack:
-    m_Name: Input Back
-    m_Type: 1
-    m_ExpectedControlType: Button
-    m_Id: b13e4db2-09a2-4873-b645-aea2533bde8a
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 43b06ba1-2529-4b46-b128-f04561181d8b
-      m_Path: <Keyboard>/backspace
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Input Back
-      m_Flags: 0
-    - m_Name: 
-      m_Id: b17a4b1a-dbf8-42b3-9306-bf6db315febf
-      m_Path: <Keyboard>/escape
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Input Back
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 318d3d30-2a89-40cf-bbfc-1a05203621ea
-      m_Path: <Keyboard>/numpad7
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Input Back
-      m_Flags: 0
-  _inputNextPage:
-    m_Name: Input Next Page
-    m_Type: 1
-    m_ExpectedControlType: Button
-    m_Id: 02198187-af17-4477-a75b-caecf94cedbc
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: b48b7b34-dbab-445c-93df-1a457200f418
-      m_Path: <Keyboard>/downArrow
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Input Next Page
-      m_Flags: 0
-    - m_Name: 
-      m_Id: bd888cd2-581f-4fab-87a5-caed5077dc51
-      m_Path: <Keyboard>/numpad2
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Input Next Page
-      m_Flags: 0
-    - m_Name: 
-      m_Id: d31c6a4d-0465-49a0-91a5-8b1d444d45ca
-      m_Path: <Keyboard>/pageDown
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Input Next Page
-      m_Flags: 0
-  _inputPrevPage:
-    m_Name: Input Prev Page
-    m_Type: 1
-    m_ExpectedControlType: Button
-    m_Id: a18e1037-7ce6-4a8d-8f7a-d821fbdd0990
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: da1c3624-015d-440f-8ac2-9059ab40b1b1
-      m_Path: <Keyboard>/upArrow
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Input Prev Page
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 4d831303-0891-4226-9738-04dea94dcc3f
-      m_Path: <Keyboard>/numpad8
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Input Prev Page
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 8421e7a2-226d-4846-b859-f2ed54ff784e
-      m_Path: <Keyboard>/pageUp
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Input Prev Page
-      m_Flags: 0
-  _inputFirstPage:
-    m_Name: Input First Page
-    m_Type: 1
-    m_ExpectedControlType: Button
-    m_Id: b499d206-36a7-4b25-be6a-31974ac6f417
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 4b61d970-3c37-49e0-a981-cb0b49e839e5
-      m_Path: <Keyboard>/home
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Input First Page
-      m_Flags: 0
-    - m_Name: 
-      m_Id: d862dda3-5399-47d3-a1d0-c3f5697c0a47
-      m_Path: <Keyboard>/numpad9
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Input First Page
-      m_Flags: 0
-  _inputLastPage:
-    m_Name: Input Last Page
-    m_Type: 1
-    m_ExpectedControlType: Button
-    m_Id: 18d64387-c844-485b-8eee-466ff6eb00f4
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: a2e1a367-9798-4cff-b108-209ecec97b84
-      m_Path: <Keyboard>/end
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Input Last Page
-      m_Flags: 0
-    - m_Name: 
-      m_Id: deb596b5-9d57-4f0c-bb29-4a2efeeb87c5
-      m_Path: <Keyboard>/numpad3
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Input Last Page
-      m_Flags: 0
-  _inputNextChapter:
-    m_Name: Input Next Chapter
-    m_Type: 1
-    m_ExpectedControlType: Button
-    m_Id: 67085541-6000-4a7d-9176-33329d6659ed
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: a7b85e25-b65c-46ab-9f39-6265835b858d
-      m_Path: <Keyboard>/rightArrow
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Input Next Chapter
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 4e2e26f0-5445-4054-9854-76ef4cb4382d
-      m_Path: <Keyboard>/numpad6
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Input Next Chapter
-      m_Flags: 0
-  _inputPrevChapter:
-    m_Name: Input Prev Chapter
-    m_Type: 1
-    m_ExpectedControlType: Button
-    m_Id: c80aaa0a-d6a1-4093-9021-3a5dc712bb20
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: dda2c368-221c-457e-bfe9-f99f25b544c5
-      m_Path: <Keyboard>/leftArrow
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Input Prev Chapter
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 2e3c503b-d476-4a94-bf56-73ad45c0857c
-      m_Path: <Keyboard>/numpad4
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Input Prev Chapter
-      m_Flags: 0
 --- !u!1 &1701891427
 GameObject:
   m_ObjectHideFlags: 0
@@ -2251,6 +2068,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1701891428}
+  - component: {fileID: 1701891432}
   - component: {fileID: 1701891431}
   - component: {fileID: 1701891430}
   - component: {fileID: 1701891429}
@@ -2260,7 +2078,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1701891428
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2336,6 +2154,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1701891427}
   m_CullTransparentMesh: 0
+--- !u!114 &1701891432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701891427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21c1eaeae447a4740a7e68e9778aeb49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _menuSelection: {fileID: 1090188424}
+  _allInputs: {fileID: -944628639613478452, guid: 571206ce61cbd89468d6471c54a3f8f2,
+    type: 3}
+  _inputConfirm: {fileID: -991107379598098246, guid: 571206ce61cbd89468d6471c54a3f8f2,
+    type: 3}
 --- !u!1 &1918355424
 GameObject:
   m_ObjectHideFlags: 0
@@ -2440,7 +2275,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 882887335}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -2476,7 +2311,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4292407495
+    rgba: 4282208835
   m_fontColor: {r: 0.2627451, g: 0.32156864, b: 0.23921569, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
