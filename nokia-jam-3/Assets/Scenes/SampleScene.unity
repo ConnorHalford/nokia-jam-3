@@ -1655,8 +1655,11 @@ MonoBehaviour:
     ResourcesFolder: Frankenstein
     NumChapters: 28
   - TitleAndAuthor: The Strange Case of Dr. Jekyll and Mr. Hyde by Robert Louis Stevenson
-    ResourcesFolder: Jekyll
+    ResourcesFolder: JekyllAndHyde
     NumChapters: 10
+  - TitleAndAuthor: Alice's Adventures in Wonderland by Lewis Carroll
+    ResourcesFolder: AliceInWonderland
+    NumChapters: 12
 --- !u!1 &1134556520
 GameObject:
   m_ObjectHideFlags: 0
