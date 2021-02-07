@@ -31,6 +31,7 @@ Book conversion steps:
 - Set last line to "<page>THE END"
 - Search for multiple consecutive spaces as that usually requires custom formatting
 - Remove any foot notes, author's notes, transcription notes etc. Search for []{}<>
+- Remove any non-narrative sections at start or end, such as biography or author or glossary
 - Replace non renderable characters including:
 	— to --
 	‘ to '
@@ -43,5 +44,4 @@ Book conversion steps:
 - Replace all "\r\n" with " "
 - Replace all "### " with "\r\n\r\n"
 - Replace all "###" with "\r\n\r\n"
-- Remove any non-narrative sections at start or end, such as biography or author or glossary
 - Split into separate text documents, with 0 being the title and author and 1+ being separate chapters or section breaks, splitting the book into reasonable text lengths for UI rendering

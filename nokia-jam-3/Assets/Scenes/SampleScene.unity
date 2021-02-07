@@ -1663,6 +1663,9 @@ MonoBehaviour:
   - TitleAndAuthor: Moby-Dick; or, The Whale by Herman Melville
     ResourcesFolder: MobyDick
     NumChapters: 136
+  - TitleAndAuthor: The War of the Worlds by H. G. Wells
+    ResourcesFolder: WarOfTheWorlds
+    NumChapters: 27
 --- !u!1 &1134556520
 GameObject:
   m_ObjectHideFlags: 0
