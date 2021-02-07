@@ -1666,6 +1666,9 @@ MonoBehaviour:
   - TitleAndAuthor: The War of the Worlds by H. G. Wells
     ResourcesFolder: WarOfTheWorlds
     NumChapters: 27
+  - TitleAndAuthor: A Study In Scarlet by Arthur Conan Doyle
+    ResourcesFolder: SherlockScarlet
+    NumChapters: 14
 --- !u!1 &1134556520
 GameObject:
   m_ObjectHideFlags: 0
