@@ -14,7 +14,7 @@ TODO:
 + Be able to wrap around book/chapter/page navigation
 - Be able to hold down input for book/chapter/page navigation
 + Book selection
-	- Title and author scrolls horizontally on the line if it doesn't fit
+	+ Title and author scrolls horizontally on the line if it doesn't fit
 	+ Counter
 	+ Selection indicated by inverted colors
 	+ Scrollbar

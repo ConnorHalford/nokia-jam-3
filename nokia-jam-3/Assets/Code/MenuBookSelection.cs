@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -21,8 +22,13 @@ public class MenuBookSelection : MonoBehaviour
 	[SerializeField] private SmallNumberRenderer _numberRenderer = null;
 	[SerializeField] private Color _colorLight = new Color32(199, 240, 216, 255);
 	[SerializeField] private Color _colorDark = new Color32(67, 82, 61, 255);
+
+	[Header("Scrolling")]
 	[SerializeField] private Image _scrollbar = null;
 	[SerializeField] private Vector2 _scrollbarRange = Vector2.zero;
+	[SerializeField] private float _horizontalVisibleWidth = 78.0f;
+	[SerializeField] private float _horizontalDelay = 0.3f;
+	[SerializeField] private float _horizontalSpeed = 5.0f;
 
 	[Header("Input")]
 	[SerializeField] private InputActionReference _inputConfirm = null;
@@ -37,6 +43,7 @@ public class MenuBookSelection : MonoBehaviour
 
 	private int _topmostBookIndex = -1;
 	private int _highlightIndex = -1;
+	private Coroutine _horizontalScroll = null;
 
 	public void ResetSelection()
 	{
@@ -53,6 +60,7 @@ public class MenuBookSelection : MonoBehaviour
 		_inputPrevPage.action.performed += OnPrevPage;
 		_inputFirstPage.action.performed += OnFirstPage;
 		_inputLastPage.action.performed += OnLastPage;
+		UpdateSelection();
 	}
 
 	private void OnDisable()
@@ -67,35 +75,44 @@ public class MenuBookSelection : MonoBehaviour
 
 	private void ScrollTo(int index)
 	{
-		int numBooks = _bookData.Length;
-		int numTexts = _bookText.Length;
-		_topmostBookIndex = Mathf.Clamp(index, 0, numBooks);
-		for (int i = 0; i < numTexts; ++i)
+		if (_topmostBookIndex != index)
 		{
-			_bookText[i].text = _bookData[_topmostBookIndex + i].TitleAndAuthor;
+			int numBooks = _bookData.Length;
+			int numTexts = _bookText.Length;
+			_topmostBookIndex = Mathf.Clamp(index, 0, numBooks);
+			for (int i = 0; i < numTexts; ++i)
+			{
+				_bookText[i].text = _bookData[_topmostBookIndex + i].TitleAndAuthor;
+			}
+			UpdateSelection();
 		}
-		UpdateSelection();
 	}
 
 	private void SetHighlight(int index)
 	{
-		if (index != _highlightIndex)
+		if (_highlightIndex != index)
 		{
 			int numTexts = _bookText.Length;
 			_highlightIndex = Mathf.Clamp(index, 0, numTexts - 1);
 
-			_highlight.transform.position = _bookText[_highlightIndex].transform.position;
+			float y = _bookText[_highlightIndex].transform.position.y;
+			_highlight.transform.position = new Vector3(_highlight.transform.position.x, y, _highlight.transform.position.z);
 
 			for (int i = 0; i < numTexts; ++i)
 			{
 				_bookText[i].color = (i == _highlightIndex) ? _colorLight : _colorDark;
 			}
+			UpdateSelection();
 		}
-		UpdateSelection();
 	}
 
 	private void UpdateSelection()
 	{
+		if (_topmostBookIndex == -1 || _highlightIndex == -1)
+		{
+			return;
+		}
+
 		// Number text
 		int number = 1 + _topmostBookIndex + _highlightIndex;
 		_numberRenderer.SetNumber(number, TextAlignment.Right);
@@ -105,6 +122,46 @@ public class MenuBookSelection : MonoBehaviour
 		float percent = (float)(number - 1) / (_bookData.Length - 1);
 		pos.y = Mathf.Floor(Mathf.Lerp(_scrollbarRange.x, _scrollbarRange.y, percent));
 		_scrollbar.transform.localPosition = pos;
+
+		// Horizontal scroll
+		int numTexts = _bookText.Length;
+		for (int i = 0; i < numTexts; ++i)
+		{
+			pos = _bookText[i].transform.localPosition;
+			pos.x = -42.0f;
+			_bookText[i].transform.localPosition = pos;
+		}
+		if (_horizontalScroll != null)
+		{
+			StopCoroutine(_horizontalScroll);
+		}
+		_horizontalScroll = StartCoroutine(HorizontalScroll());
+	}
+
+	private IEnumerator HorizontalScroll()
+	{
+		TextMeshProUGUI text = _bookText[_highlightIndex];
+		float startX = text.transform.localPosition.x;
+		float endX = startX - text.preferredWidth + _horizontalVisibleWidth;
+		WaitForSeconds delay = new WaitForSeconds(_horizontalDelay);
+		while (true)
+		{
+			// Wait before scrolling
+			yield return delay;
+
+			// Scroll horizontally
+			float x = text.transform.localPosition.x;
+			while (x > endX)
+			{
+				x = Mathf.Max(endX, x - _horizontalSpeed * Time.deltaTime);
+				text.transform.localPosition = new Vector3(x, text.transform.localPosition.y, text.transform.localPosition.z);
+				yield return null;
+			}
+
+			// Wait before returning
+			yield return delay;
+			text.transform.localPosition = new Vector3(startX, text.transform.localPosition.y, text.transform.localPosition.z);
+		}
 	}
 
 	private void OnConfirm(InputAction.CallbackContext context)

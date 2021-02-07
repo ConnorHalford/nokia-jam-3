@@ -1628,6 +1628,9 @@ MonoBehaviour:
   _colorDark: {r: 0.2627451, g: 0.32156864, b: 0.23921569, a: 1}
   _scrollbar: {fileID: 659507979}
   _scrollbarRange: {x: 17.9, y: -7.1}
+  _horizontalVisibleWidth: 78
+  _horizontalDelay: 1.6
+  _horizontalSpeed: 25
   _inputConfirm: {fileID: -991107379598098246, guid: 571206ce61cbd89468d6471c54a3f8f2,
     type: 3}
   _inputBack: {fileID: 5828660188516100503, guid: 571206ce61cbd89468d6471c54a3f8f2,
