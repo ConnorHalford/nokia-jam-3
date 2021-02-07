@@ -18,6 +18,7 @@ public class MenuBookSelection : MonoBehaviour
 	[SerializeField] private MenuReading _menuReading = null;
 	[SerializeField] private Image _highlight = null;
 	[SerializeField] private TextMeshProUGUI[] _bookText = null;
+	[SerializeField] private SmallNumberRenderer _numberRenderer = null;
 	[SerializeField] private Color _colorLight = new Color32(199, 240, 216, 255);
 	[SerializeField] private Color _colorDark = new Color32(67, 82, 61, 255);
 
@@ -70,6 +71,7 @@ public class MenuBookSelection : MonoBehaviour
 		{
 			_bookText[i].text = _bookData[_topmostBookIndex + i].TitleAndAuthor;
 		}
+		_numberRenderer.SetNumber(1 + _topmostBookIndex + _highlightIndex, TextAlignment.Right);
 	}
 
 	private void SetHighlight(int index)
@@ -86,6 +88,7 @@ public class MenuBookSelection : MonoBehaviour
 				_bookText[i].color = (i == _highlightIndex) ? _colorLight : _colorDark;
 			}
 		}
+		_numberRenderer.SetNumber(1 + _topmostBookIndex + _highlightIndex, TextAlignment.Right);
 	}
 
 	private void OnConfirm(InputAction.CallbackContext context)

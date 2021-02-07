@@ -6,8 +6,8 @@ public class MenuReading : MonoBehaviour
 {
 	[Header("UI")]
 	[SerializeField] private MenuBookSelection _menuSelection = null;
-	[SerializeField] private TextMeshProUGUI _textChapter = null;
-	[SerializeField] private TextMeshProUGUI _textPage = null;
+	[SerializeField] private SmallFractionRenderer _fractionChapter = null;
+	[SerializeField] private SmallFractionRenderer _fractionPage = null;
 	[SerializeField] private TextMeshProUGUI _textBook = null;
 
 	[Header("Input")]
@@ -59,7 +59,7 @@ public class MenuReading : MonoBehaviour
 	{
 		_chapterIndex = index;
 		_currentChapter = Resources.Load<TextAsset>(_bookResourcesFolder + "/" + _chapterIndex.ToString());
-		_textChapter.text = _chapterIndex.ToString() + "/" + _numChapters.ToString();
+		_fractionChapter.SetFraction(_chapterIndex, _numChapters, TextAlignment.Left);
 		_textBook.text = _currentChapter.text;
 		_textBook.ForceMeshUpdate();
 		LoadPage(1);
@@ -69,7 +69,7 @@ public class MenuReading : MonoBehaviour
 	{
 		_pageIndex = index;
 		_textBook.pageToDisplay = _pageIndex;
-		_textPage.text = _pageIndex.ToString() + "/" + _textBook.textInfo.pageCount.ToString();
+		_fractionPage.SetFraction(_pageIndex, _textBook.textInfo.pageCount, TextAlignment.Right);
 	}
 
 	private void OnBack(InputAction.CallbackContext context)

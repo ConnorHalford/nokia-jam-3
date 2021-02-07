@@ -9,11 +9,13 @@ TODO:
 + Home/End jump to top/bottom
 + Left/right chapter by chapter scrolling
 + Chapter and page counters
-	- Use the smaller number font used in text editing
+	+ Use the smaller number font used in text editing
 + Books title screen like Messages/Games/etc on original phone
++ Be able to wrap around book/chapter/page navigation
+- Be able to hold down input for book/chapter/page navigation
 + Book selection
 	- Title and author scrolls horizontally on the line if it doesn't fit
-	- Counter
+	+ Counter
 	+ Selection indicated by inverted colors
 	- Scrollbar
 	+ Around the World in 80 Days by Jules Verne
@@ -30,6 +32,7 @@ Book conversion steps:
 - Remove guthenberg header and footer
 - Set first line to "TITLE by AUTHOR"
 - Set last line to "<page>THE END"
+- Search for multiple consecutive spaces as that usually requires custom formatting
 - Replace all "\r\n\r\n" with "###"
 - Replace all "\r\n" with " "
 - Replace all "### " with "\r\n\r\n"
