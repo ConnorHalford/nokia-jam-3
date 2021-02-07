@@ -1281,6 +1281,8 @@ MonoBehaviour:
   _fractionChapter: {fileID: 1469450920}
   _fractionPage: {fileID: 1947904059}
   _textBook: {fileID: 222200812}
+  _holdInputDelay: 0.5
+  _holdInputPeriod: 0.2
   _inputBack: {fileID: 5828660188516100503, guid: 571206ce61cbd89468d6471c54a3f8f2,
     type: 3}
   _inputNextPage: {fileID: 4288994307084833607, guid: 571206ce61cbd89468d6471c54a3f8f2,
