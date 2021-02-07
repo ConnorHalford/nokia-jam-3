@@ -1669,6 +1669,9 @@ MonoBehaviour:
   - TitleAndAuthor: A Study In Scarlet by Arthur Conan Doyle
     ResourcesFolder: SherlockScarlet
     NumChapters: 14
+  - TitleAndAuthor: The Wonderful Wizard of Oz by L. Frank Baum
+    ResourcesFolder: WizardOfOz
+    NumChapters: 24
 --- !u!1 &1134556520
 GameObject:
   m_ObjectHideFlags: 0
