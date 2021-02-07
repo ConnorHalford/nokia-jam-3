@@ -18,7 +18,8 @@ TODO:
 	+ Counter
 	+ Selection indicated by inverted colors
 	+ Scrollbar
-- Reorder the books alphabetically
++ Reorder the books alphabetically
+- SFX
 - Script to find all unique characters in a text which aren't handled by the Nokia font, so they can be manually replaced
 - Light/dark mode (post-processing shader to replace dark pixels with light and vice versa)
 

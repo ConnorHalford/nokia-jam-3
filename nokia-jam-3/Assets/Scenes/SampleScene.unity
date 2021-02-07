@@ -1648,27 +1648,27 @@ MonoBehaviour:
   _inputLastPage: {fileID: 2950388411950787422, guid: 571206ce61cbd89468d6471c54a3f8f2,
     type: 3}
   _bookData:
+  - TitleAndAuthor: Alice's Adventures in Wonderland by Lewis Carroll
+    ResourcesFolder: AliceInWonderland
+    NumChapters: 12
   - TitleAndAuthor: Around the World in 80 Days by Jules Verne
     ResourcesFolder: AroundTheWorldIn80Days
     NumChapters: 37
   - TitleAndAuthor: 'Frankenstein: Or, The Modern Prometheus by Mary W. Shelley'
     ResourcesFolder: Frankenstein
     NumChapters: 28
-  - TitleAndAuthor: The Strange Case of Dr. Jekyll and Mr. Hyde by Robert Louis Stevenson
-    ResourcesFolder: JekyllAndHyde
-    NumChapters: 10
-  - TitleAndAuthor: Alice's Adventures in Wonderland by Lewis Carroll
-    ResourcesFolder: AliceInWonderland
-    NumChapters: 12
   - TitleAndAuthor: Moby-Dick; or, The Whale by Herman Melville
     ResourcesFolder: MobyDick
     NumChapters: 136
-  - TitleAndAuthor: The War of the Worlds by H. G. Wells
-    ResourcesFolder: WarOfTheWorlds
-    NumChapters: 27
+  - TitleAndAuthor: The Strange Case of Dr. Jekyll and Mr. Hyde by Robert Louis Stevenson
+    ResourcesFolder: JekyllAndHyde
+    NumChapters: 10
   - TitleAndAuthor: A Study In Scarlet by Arthur Conan Doyle
     ResourcesFolder: SherlockScarlet
     NumChapters: 14
+  - TitleAndAuthor: The War of the Worlds by H. G. Wells
+    ResourcesFolder: WarOfTheWorlds
+    NumChapters: 27
   - TitleAndAuthor: The Wonderful Wizard of Oz by L. Frank Baum
     ResourcesFolder: WizardOfOz
     NumChapters: 24
