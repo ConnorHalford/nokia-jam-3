@@ -80,18 +80,13 @@ public class MenuReading : MonoBehaviour
 
 	private void OnNextPage(InputAction.CallbackContext context)
 	{
-		if (_pageIndex < _textBook.textInfo.pageCount)
-		{
-			LoadPage(_pageIndex + 1);
-		}
+		LoadPage(1 + (_pageIndex % _textBook.textInfo.pageCount));
 	}
 
 	private void OnPrevPage(InputAction.CallbackContext context)
 	{
-		if (_pageIndex > 1)
-		{
-			LoadPage(_pageIndex - 1);
-		}
+		int numPages = _textBook.textInfo.pageCount;
+		LoadPage(1 + ((numPages + _pageIndex - 2) % numPages));
 	}
 
 	private void OnFirstPage(InputAction.CallbackContext context)
@@ -106,17 +101,11 @@ public class MenuReading : MonoBehaviour
 
 	private void OnNextChapter(InputAction.CallbackContext context)
 	{
-		if (_chapterIndex < _numChapters)
-		{
-			LoadChapter(_chapterIndex + 1);
-		}
+		LoadChapter((_chapterIndex + 1) % (_numChapters + 1));
 	}
 
 	private void OnPrevChapter(InputAction.CallbackContext context)
 	{
-		if (_chapterIndex > 0)
-		{
-			LoadChapter(_chapterIndex - 1);
-		}
+		LoadChapter((_numChapters + _chapterIndex) % (_numChapters + 1));
 	}
 }
