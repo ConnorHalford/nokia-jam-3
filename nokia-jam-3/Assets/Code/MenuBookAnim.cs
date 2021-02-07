@@ -29,6 +29,6 @@ public class MenuBookAnim : MonoBehaviour
 	private void OnConfirm(InputAction.CallbackContext context)
 	{
 		gameObject.SetActive(false);
-		_menuSelection.gameObject.SetActive(true);
+		_menuSelection.ResetSelection();
 	}
 }

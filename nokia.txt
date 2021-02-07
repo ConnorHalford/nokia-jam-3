@@ -17,7 +17,7 @@ TODO:
 	- Title and author scrolls horizontally on the line if it doesn't fit
 	+ Counter
 	+ Selection indicated by inverted colors
-	- Scrollbar
+	+ Scrollbar
 	+ Around the World in 80 Days by Jules Verne
 	+ Frankenstein by Mary Shelley
 	+ Curious case of Dr Jekyll and Mr Hyde

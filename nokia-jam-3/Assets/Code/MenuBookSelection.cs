@@ -21,6 +21,8 @@ public class MenuBookSelection : MonoBehaviour
 	[SerializeField] private SmallNumberRenderer _numberRenderer = null;
 	[SerializeField] private Color _colorLight = new Color32(199, 240, 216, 255);
 	[SerializeField] private Color _colorDark = new Color32(67, 82, 61, 255);
+	[SerializeField] private Image _scrollbar = null;
+	[SerializeField] private Vector2 _scrollbarRange = Vector2.zero;
 
 	[Header("Input")]
 	[SerializeField] private InputActionReference _inputConfirm = null;
@@ -36,8 +38,9 @@ public class MenuBookSelection : MonoBehaviour
 	private int _topmostBookIndex = -1;
 	private int _highlightIndex = -1;
 
-	private void Awake()
+	public void ResetSelection()
 	{
+		gameObject.SetActive(true);
 		ScrollTo(0);
 		SetHighlight(0);
 	}
@@ -71,7 +74,7 @@ public class MenuBookSelection : MonoBehaviour
 		{
 			_bookText[i].text = _bookData[_topmostBookIndex + i].TitleAndAuthor;
 		}
-		_numberRenderer.SetNumber(1 + _topmostBookIndex + _highlightIndex, TextAlignment.Right);
+		UpdateSelection();
 	}
 
 	private void SetHighlight(int index)
@@ -88,7 +91,20 @@ public class MenuBookSelection : MonoBehaviour
 				_bookText[i].color = (i == _highlightIndex) ? _colorLight : _colorDark;
 			}
 		}
-		_numberRenderer.SetNumber(1 + _topmostBookIndex + _highlightIndex, TextAlignment.Right);
+		UpdateSelection();
+	}
+
+	private void UpdateSelection()
+	{
+		// Number text
+		int number = 1 + _topmostBookIndex + _highlightIndex;
+		_numberRenderer.SetNumber(number, TextAlignment.Right);
+
+		// Scrollbar
+		Vector3 pos = _scrollbar.transform.localPosition;
+		float percent = (float)(number - 1) / (_bookData.Length - 1);
+		pos.y = Mathf.Floor(Mathf.Lerp(_scrollbarRange.x, _scrollbarRange.y, percent));
+		_scrollbar.transform.localPosition = pos;
 	}
 
 	private void OnConfirm(InputAction.CallbackContext context)
