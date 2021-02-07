@@ -31,6 +31,8 @@ public class MenuBookSelection : MonoBehaviour
 	[SerializeField] private float _horizontalSpeed = 5.0f;
 
 	[Header("Input")]
+	[SerializeField] private float _holdInputDelay = 0.5f;
+	[SerializeField] private float _holdInputPeriod = 0.2f;
 	[SerializeField] private InputActionReference _inputConfirm = null;
 	[SerializeField] private InputActionReference _inputBack = null;
 	[SerializeField] private InputActionReference _inputNextPage = null;
@@ -43,7 +45,9 @@ public class MenuBookSelection : MonoBehaviour
 
 	private int _topmostBookIndex = -1;
 	private int _highlightIndex = -1;
-	private Coroutine _horizontalScroll = null;
+	private Coroutine _horizontalScrollCoroutine = null;
+	private Coroutine _holdInputCoroutine = null;
+	private System.Action _heldAction = null;
 
 	public void ResetSelection()
 	{
@@ -57,7 +61,9 @@ public class MenuBookSelection : MonoBehaviour
 		_inputConfirm.action.performed += OnConfirm;
 		_inputBack.action.performed += OnBack;
 		_inputNextPage.action.performed += OnNextPage;
+		_inputNextPage.action.canceled += OnNextPage;
 		_inputPrevPage.action.performed += OnPrevPage;
+		_inputPrevPage.action.canceled += OnPrevPage;
 		_inputFirstPage.action.performed += OnFirstPage;
 		_inputLastPage.action.performed += OnLastPage;
 		UpdateSelection();
@@ -65,10 +71,14 @@ public class MenuBookSelection : MonoBehaviour
 
 	private void OnDisable()
 	{
+		StopCoroutine(ref _horizontalScrollCoroutine);
+		StopCoroutine(ref _holdInputCoroutine);
 		_inputConfirm.action.performed -= OnConfirm;
 		_inputBack.action.performed -= OnBack;
 		_inputNextPage.action.performed -= OnNextPage;
+		_inputNextPage.action.canceled -= OnNextPage;
 		_inputPrevPage.action.performed -= OnPrevPage;
+		_inputPrevPage.action.canceled -= OnPrevPage;
 		_inputFirstPage.action.performed -= OnFirstPage;
 		_inputLastPage.action.performed -= OnLastPage;
 	}
@@ -131,14 +141,11 @@ public class MenuBookSelection : MonoBehaviour
 			pos.x = -42.0f;
 			_bookText[i].transform.localPosition = pos;
 		}
-		if (_horizontalScroll != null)
-		{
-			StopCoroutine(_horizontalScroll);
-		}
-		_horizontalScroll = StartCoroutine(HorizontalScroll());
+		StopCoroutine(ref _horizontalScrollCoroutine);
+		_horizontalScrollCoroutine = StartCoroutine(HorizontalScrollCoroutine());
 	}
 
-	private IEnumerator HorizontalScroll()
+	private IEnumerator HorizontalScrollCoroutine()
 	{
 		TextMeshProUGUI text = _bookText[_highlightIndex];
 		float startX = text.transform.localPosition.x;
@@ -177,7 +184,58 @@ public class MenuBookSelection : MonoBehaviour
 		_menuBookAnim.gameObject.SetActive(true);
 	}
 
+	private void OnFirstPage(InputAction.CallbackContext context)
+	{
+		ScrollTo(0);
+		SetHighlight(0);
+	}
+
+	private void OnLastPage(InputAction.CallbackContext context)
+	{
+		int numBooks = _bookData.Length;
+		int numTexts = _bookText.Length;
+		ScrollTo(numBooks - numTexts);
+		SetHighlight(numTexts - 1);
+	}
+
 	private void OnNextPage(InputAction.CallbackContext context)
+	{
+		HandleHeldInput(context, SelectNextBook);
+	}
+
+	private void OnPrevPage(InputAction.CallbackContext context)
+	{
+		HandleHeldInput(context, SelectPrevBook);
+	}
+
+	private void HandleHeldInput(InputAction.CallbackContext context, System.Action action)
+	{
+		if (context.performed)
+		{
+			StopCoroutine(ref _holdInputCoroutine);
+			_heldAction = action;
+			_holdInputCoroutine = StartCoroutine(HoldInputCoroutine());
+		}
+		else if (context.canceled && _heldAction == action)
+		{
+			StopCoroutine(ref _holdInputCoroutine);
+		}
+	}
+
+	private IEnumerator HoldInputCoroutine()
+	{
+		_heldAction();
+		yield return new WaitForSeconds(_holdInputDelay);
+
+		WaitForSeconds period = new WaitForSeconds(_holdInputPeriod);
+		while (true)
+		{
+			_heldAction();
+			yield return period;
+		}
+	}
+
+	private void SelectNextBook()
 	{
 		int numBooks = _bookData.Length;
 		int numTexts = _bookText.Length;
@@ -199,7 +257,7 @@ public class MenuBookSelection : MonoBehaviour
 		}
 	}
 
-	private void OnPrevPage(InputAction.CallbackContext context)
+	private void SelectPrevBook()
 	{
 		int numBooks = _bookData.Length;
 		int numTexts = _bookText.Length;
@@ -221,17 +279,12 @@ public class MenuBookSelection : MonoBehaviour
 		}
 	}
 
-	private void OnFirstPage(InputAction.CallbackContext context)
+	private void StopCoroutine(ref Coroutine coroutine)
 	{
-		ScrollTo(0);
-		SetHighlight(0);
-	}
-
-	private void OnLastPage(InputAction.CallbackContext context)
-	{
-		int numBooks = _bookData.Length;
-		int numTexts = _bookText.Length;
-		ScrollTo(numBooks - numTexts);
-		SetHighlight(numTexts - 1);
+		if (coroutine != null)
+		{
+			StopCoroutine(coroutine);
+			coroutine = null;
+		}
 	}
 }

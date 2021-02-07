@@ -1631,6 +1631,8 @@ MonoBehaviour:
   _horizontalVisibleWidth: 78
   _horizontalDelay: 1.6
   _horizontalSpeed: 25
+  _holdInputDelay: 0.5
+  _holdInputPeriod: 0.2
   _inputConfirm: {fileID: -991107379598098246, guid: 571206ce61cbd89468d6471c54a3f8f2,
     type: 3}
   _inputBack: {fileID: 5828660188516100503, guid: 571206ce61cbd89468d6471c54a3f8f2,
